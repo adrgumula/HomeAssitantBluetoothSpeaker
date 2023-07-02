@@ -4,7 +4,7 @@ The goal of this tutorial is to pair arbitrary bluetooth speaker and use with an
 
 Used installation:
 - Proxmox
-- Home Assitant (Supervisioned version) (I've being using current Home Assistant 2023.6.3 -> Supervisor 2023.06.4 -> Operating System 10.3)
+- Home Assitant (Supervisioned version) (I've being using currently Home Assistant 2023.6.3 -> Supervisor 2023.06.4 -> Operating System 10.3)
 - any bluetooth spearker without auto-shutdown funciton when inactive (not playing for a longer time). Iv'e used **Xiaomi Mi Compact Bluetooth Speaker 2**
 - https://mi-home.pl/cdn/shop/products/2591_micompactbluetoothspeaker2-640px-hero_5b1911e4-9fdb-489b-b76e-d159d0e9ba1f.png?v=1679760040&width=1440![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/de2e95d6-f66e-44f2-b67e-652a76e82886)
 
