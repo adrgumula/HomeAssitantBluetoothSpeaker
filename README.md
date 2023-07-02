@@ -1,4 +1,4 @@
-# Home Assitant Bluetooth Speaker
+# Home Assistant Bluetooth Speaker
 
 The goal of this tutorial is to pair arbitrary bluetooth speaker and use with and the standard output for Home Assistant (HASSO)
 
