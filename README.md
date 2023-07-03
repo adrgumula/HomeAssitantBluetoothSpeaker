@@ -24,13 +24,14 @@ The goal of this tutorial is to pair arbitrary bluetooth speaker and use with an
 12. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
 13. (in the case of any problems type ```help``` for more info)
 14. At this point your BT should be connected to your HA
-15. Type: ```exit```
+15. NOTE: in case when VM with HA restarts repeat steps 6 and 12. 
+16. Type: ```exit```
     
 ## II. Installing requied add-ons & integrations
 1. Goto HA and install Settings -> Add-in **VLC Local**
-   a. Goto **VLC Local -> Configuration**
-   b. Set the **Telnet Password** and **Http Password** (you can use the default **mypasswrd** as well)
-   c. change the **Audio-Output** to the correspinding **BT Name**
+    a. Goto **VLC Local -> Configuration**
+    b. Set the **Telnet Password** and **Http Password** (you can use the default **mypasswrd** as well)
+    c. change the **Audio-Output** to the correspinding **BT Name**
 2. Go back ot VLC-Local **Info tab** and enable **Auto-Start**
 3. Go to HA Settings -> **Devices & Services (Integrations)** and **Add New Integration**
 4. Search for **VLC LAN** select it and pick-up **Local VLC Media player via Telnet**
