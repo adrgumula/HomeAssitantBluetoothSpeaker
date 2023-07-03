@@ -21,9 +21,11 @@
 11. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
 12. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
 13. (in the case of any problems type ```help``` for more info)
-14. At this point your BT should be connected to your HA
-15. NOTE: in case when VM with HA restarts repeat steps 6 and 12. 
-16. Type: ```exit```
+14. Check the connected devices using comment: ```list sinks``` and look for something simiar to Name: ```bluez_sink.4C_72_74_38_AA_BB.a2dp_sink```
+15. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB```
+16. At this point your BT should be connected to your HA
+17. NOTE: in case when VM with HA restarts repeat steps 6 and 12. 
+18. Type: ```exit```
     
 ### II. Installing requied add-ons & integrations
 1. Goto HA and install **Settings -> Add-in VLC Local**
@@ -44,3 +46,4 @@
 3. **Content type**: ```music```
 4. **Content ID**: ```/local/your.mp3``` (files your.mp3 should be located at the ```/local/www/``` folder of your HA installation)
 6. Press **Call-Service**   
+<img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/583cc9ce-cf6b-41d5-b583-b23efe7d07e3">
