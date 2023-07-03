@@ -32,7 +32,7 @@
 4. change the **Audio-Output** to the correspinding **BT Name** (it's the same obtainied at I.1 point)
 5. <img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/88f7a27a-105c-4fa7-ba42-61e00973ccc5">
 6. Go back to VLC-Local **Info tab** and enable **Auto-Start** option
-7. Hit **Start**
+7. Get back to **Info** tab hit **Start**
 8. Go to HA Settings -> **Devices & Services (Integrations)** and **Add New Integration**
 9. Search for **VLC LAN** select it and pick-up **Local VLC Media player via Telnet**
 10. Enter the password **Telnet Password** and click **Submit**
