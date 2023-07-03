@@ -1,6 +1,6 @@
 # Home Assistant Bluetooth Speaker
 
-## The goal of this tutorial is to pair arbitrary bluetooth speaker with the standard output for Home Assistant (HASSO)
+## The goal of this tutorial is to pair arbitrary bluetooth speaker with the standard output for Home Assistant (HASSO) to be able to hear notification & TTM
 
 ### What was used during the installation:
 - Proxmox
