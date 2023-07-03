@@ -1,5 +1,3 @@
-# Home Assistant Bluetooth Speaker
-
 ## The goal of this tutorial is to pair arbitrary bluetooth speaker with the standard output for Home Assistant (HASSO) to be able to hear notification & TTM
 
 ### What was used during the installation:
@@ -32,10 +30,12 @@
 2. Goto **VLC Local -> Configuration**
 3. Set the **Telnet Password** and **Http Password** (you can use the default **mypasswrd** as well)
 4. change the **Audio-Output** to the correspinding **BT Name** (it's the same obtainied at I.1 point)
-5. Go back to VLC-Local **Info tab** and enable **Auto-Start** option
-6. Go to HA Settings -> **Devices & Services (Integrations)** and **Add New Integration**
-7. Search for **VLC LAN** select it and pick-up **Local VLC Media player via Telnet**
-8. Enter the password **Telnet Password** and click **Submit**
+5. <img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/88f7a27a-105c-4fa7-ba42-61e00973ccc5">
+6. Go back to VLC-Local **Info tab** and enable **Auto-Start** option
+7. Hit **Start**
+8. Go to HA Settings -> **Devices & Services (Integrations)** and **Add New Integration**
+9. Search for **VLC LAN** select it and pick-up **Local VLC Media player via Telnet**
+10. Enter the password **Telnet Password** and click **Submit**
 
 ### III. Testing
 1. Go to **Developers Tools** and **Services** and enter followings :
