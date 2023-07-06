@@ -21,11 +21,12 @@
 11. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
 12. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
 13. (in the case of any problems type ```help``` for more info)
-14. Check the connected devices using comment: ```list sinks``` and look for something simiar to Name: ```bluez_sink.4C_72_74_38_AA_BB.a2dp_sink```
-15. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB```
-16. At this point your BT should be connected to your HA
-17. NOTE: in case when VM with HA restarts repeat steps 6 and 12. 
-18. Type: ```exit```
+14. Check the connected devices using command: ```pactl list pactl``` and look for something simiar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink```
+15. ![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/339d12bc-6e5b-49ad-9d9a-18788a30cfa2)
+16. Make the new BT device as the default sound output by using follwing command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
+17. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
+18. At this point your BT should be connected to your HA
+20. Type: ```exit```
     
 ### II. Installing requied add-ons & integrations
 1. Goto HA and install **Settings -> Add-in VLC Local**
@@ -38,6 +39,7 @@
 8. Go to HA Settings -> **Devices & Services (Integrations)** and **Add New Integration**
 9. Search for **VLC LAN** select it and pick-up **Local VLC Media player via Telnet**
 10. Enter the password **Telnet Password** and click **Submit**
+11. NOTE: in case when VM with HA restarts & or BT device shutdowns power on the dev (XMYX02YM should say "Connected" after a few seconds) and go to section **I.16** and **II.4** points, and start **VLC Local** back again
 
 ### III. Testing
 1. Go to **Developers Tools** and **Services** and enter followings :
