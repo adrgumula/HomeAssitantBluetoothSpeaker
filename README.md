@@ -15,20 +15,24 @@
 4. Switch off yout BT speaker
 5. Loging into the HA using termina: login@IP_Adress
 6. Type: ```bluetoothctl```
-7. Type: ```scan on```
-8. Switch on your BT speaker & enter it into paring mode
-9. Check on the console if your BT speaker was detected (by name of MAC adress)
-10. Type: ```pair MAC_ADRESS``` (for example: pair 00:11:22:33:44:55)
-11. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
-12. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
-13. (in the case of any problems type ```help``` for more info)
-14. Check the connected devices using command: ```pactl list pactl``` and look for something simiar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink```
-15. ![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/339d12bc-6e5b-49ad-9d9a-18788a30cfa2)
-16. Make the new BT device as the default sound output by using follwing command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
-17. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
-18. Type ```ha audio reload``` and wait for ```Command completed successfully``` message
-19. At this point your BT should be connected to your HA
-20. Type: ```exit```
+7. Type: ```list``` to list all of your connected BT dongles. You should get the Mac adress of all your BT dongles
+8. Type: ```select MAC_ADRESS_DONGLE``` (for example: select 55:44:33:22:11:00)
+10. Type: ```default-agent``` to make selected BT-dongle a default connector with your BT devices
+11. Let's start connection & paring with your BT-speaker.
+12. Type: ```scan on```
+13. Switch on your BT speaker & enter it into paring mode
+14. Check on the console if your BT speaker was detected (by name of MAC adress)
+15. Type: ```pair MAC_ADRESS``` (for example: pair 00:11:22:33:44:55)
+16. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
+17. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
+18. (in the case of any problems type ```help``` for more info)
+19. Check the connected devices using command: ```pactl list``` and look for something simiar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink```
+20. ![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/339d12bc-6e5b-49ad-9d9a-18788a30cfa2)
+21. Make the new BT device as the default sound output by using follwing command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
+22. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
+23. Type ```ha audio reload``` and wait for ```Command completed successfully``` message
+24. At this point your BT should be connected to your HA
+25. Type: ```exit```
     
 ### II. Installing requied add-ons & integrations
 1. Goto HA and install **Settings -> Add-in VLC Local**
