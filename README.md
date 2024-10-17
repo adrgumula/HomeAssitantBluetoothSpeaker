@@ -26,7 +26,7 @@
 16. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
 17. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
 18. (in the case of any problems type ```help``` for more info)
-19. Check the connected devices using command: ```pactl list``` and look for something simiar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink```
+19. Check the connected devices using commands: ```pactl list | grep ".a2dp_sink"```. Look for something simiar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink``` (NOTE: the number represents the MAC adress of your BT speaker)
 20. ![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/339d12bc-6e5b-49ad-9d9a-18788a30cfa2)
 21. Make the new BT device as the default sound output by using follwing command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
 22. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
