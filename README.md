@@ -1,4 +1,4 @@
-## The goal of this tutorial is to pair arbitrary bluetooth speaker with the Home Assistant (HASSO) to be able to hear notifications & TTMs
+## The goal of this tutorial is to pair arbitrary bluetooth speaker with the Home Assistant (HASSO) to be able to hear notifications & Text-To-Speach (TTS)
 
 ### What was used during the installation:
 Proxmox server
@@ -20,16 +20,16 @@ Proxmox server
 10. Type: ```default-agent``` to make selected BT-dongle a default connector with your BT devices
 11. Let's start connection & paring with your BT-speaker.
 12. Type: ```scan on```
-13. Switch on your BT speaker & put it into paring mode
-14. Check on the console if your BT speaker was detected (by name of MAC address)
+13. Turn on your BT speaker & set it to paring mode
+14. Check the console to see if your BT speaker has been detected (look for its name or MAC address). NOTE: Be patient during this process. If the speaker does not appear, try putting it back into pairing mode and checking again.
 15. Type: ```pair MAC_ADRESS``` (for example: pair 00:11:22:33:44:55)
 16. Type: ```trust MAC_ADRESS``` (for example: trust 00:11:22:33:44:55)
 17. Type: ```connect MAC_ADRESS``` (for example: connect 00:11:22:33:44:55)
 18. (in the case of any problems type ```help``` for more info)
-19. Check the connected devices using commands: ```pactl list | grep ".a2dp_sink"```. Look for something similar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink``` (NOTE: the number represents the MAC adress of your BT speaker)
+19. Check the connected devices using commands: ```pactl list | grep ".a2dp_sink"```. Look for something similar to Name: ```bluez_sink.4C_72_74_XX_XX_XX.a2dp_sink``` (NOTE: the number represents the MAC address of your BT speaker)
 20. ![image](https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/339d12bc-6e5b-49ad-9d9a-18788a30cfa2)
-21. Make the new BT device as the default sound output by using following command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
-22. Check of the output is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
+21. Set the newly connected BT device as the default sound output by using following command: ```pactl set-default-sink NAME_OF_YOUR_BT_SPEAKER_FIND_IN_THE_PREV_STEP``` 
+22. Check whether the output-audio is not muted, nor volume set to zero, by ```Mute:``` (should be ```no```) and  ```Volume:```, should be ```front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB``` by using following commend: ```pactl list sinks | grep "Mute:"``` and ```pactl list sinks | grep "Volume:"```
 23. Type ```ha audio reload``` and wait for ```Command completed successfully``` message on the terminal
 24. At this point your BT should be connected to your HA
 25. Type: ```exit```
@@ -38,7 +38,7 @@ Proxmox server
 1. Goto HA and install **Settings -> Add-in VLC Local**
 2. Goto **VLC Local -> Configuration**
 3. Set the **Telnet Password** and **Http Password** (you can use the default **mypasswrd** as well)
-4. change the **Audio-Output** to the corresponding **BT Name** (it's the same obtained at I.1 point)
+4. Change the **Audio-Output** to the corresponding **BT Name** (it's the same obtained at I.1 point)
 5. <img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/88f7a27a-105c-4fa7-ba42-61e00973ccc5">
 6. Go back to VLC-Local **Info tab** and enable **Auto-Start** option
 7. Get back to **Info** tab hit **Start**
