@@ -47,11 +47,23 @@ Proxmox server
 10. Enter the password **Telnet Password** and click **Submit**
 11. NOTE: in case when VM with HA restarts & or BT device shutdowns power on the dev (XMYX02YM should say "Connected" after a few seconds) and go to section **I.12** and **II.4** points, and start **VLC Local** back again
 
-### III. Testing
+### III. Testing (Audio files)
 1. Go to **Developers Tools** and **Services** and enter followings :
-2. **Service**: ```Media player: Play media```
+2. **Service** or **Actions** :  ```Media player: Play media```
 3. **Target**: Search for ```VLC``` and select your one
-3. **Content type**: ```music```
-4. **Content ID**: ```/local/your.mp3``` (files your.mp3 should be located at the ```/local/www/``` folder of your HA installation)
-6. Press **Call-Service**   
-<img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/583cc9ce-cf6b-41d5-b583-b23efe7d07e3">
+4. **Content type**: ```music```
+5. **Content ID**: ```/local/your.mp3``` (files your.mp3 should be located at the ```/local/www/``` folder of your HA installation)
+6. Press **Call-Service** or **Perform the action**   
+   <img width="400" alt="image" src="https://github.com/adrgumula/HomeAssitantBluetoothSpeaker/assets/70687019/583cc9ce-cf6b-41d5-b583-b23efe7d07e3">
+
+### III. Testing (TTS - Text to speach)
+1. Go to **Developers Tools** and go to **Actions** or **Services** and enter followings :
+2. **Service** or **Actions**: type ```TTS``` and select one of your favourite (or default) one Text-To-Speach (for the porpouse of this tutoral I used gogole with google translate 
+  <img width="1202" alt="image" src="https://github.com/user-attachments/assets/4b407020-149d-4ea7-9079-ceb20338a9cd" />
+
+4. **Target** or **entity_id**: Search for ```VLC``` and select your one
+5. **Message**: type anything you want to be converted to speach
+6. Press **Call-Service** or **Perform the action**   
+   <img width="1312" alt="image" src="https://github.com/user-attachments/assets/2b4bfc48-8db0-457f-b68b-344304ab2cdd" />
+
+
